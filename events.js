@@ -44,7 +44,7 @@ const select = e => {
         targetsArray.push(e.target);
         if (movAllow()) {
             swap();
-            hMatch(width);
+            // hMatch(width);
             vMatch(width);
             fill(width);
             targetsArray[0].classList.remove("selected");
