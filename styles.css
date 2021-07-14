@@ -5,11 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    transition: all 400ms ease;
-    -webkit-transition: all 400ms ease;
-    -moz-transition: all 400ms ease;
-    -ms-transition: all 400ms ease;
-    -o-transition: all 400ms ease;
+    transition: all 1000ms ease;
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
 }
 
 body {
@@ -54,8 +54,6 @@ h1 {
     margin: 30px;
     background-color: rgb(124,37,72);
     border-radius: 5px;
-    /* position: relative;
-    top: 300px; */
 }
 
 .icons {
@@ -72,9 +70,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    /* top: 250px; */
-    /* -webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);*/
 }
 
 .item{

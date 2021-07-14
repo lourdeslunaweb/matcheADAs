@@ -81,7 +81,8 @@ const fill = width => {
         let rowItems = document.querySelectorAll(`[data-row="${i}"]`)
         for (let j = 0; j < rowItems.length; j++) {
             if (rowItems[j].textContent === "") {
-                rowItems[j].textContent = animals[Math.floor(Math.random() * animals.length)];
+                rowItems[j].textContent = "x";
+                // animals[Math.floor(Math.random() * animals.length)];
             }
         }
     }
