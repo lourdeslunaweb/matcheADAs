@@ -18,7 +18,6 @@ const createBoard = width => {
         board.style.width = "504px";
         boardWidth = 504;
     }
-
     let itemWidth = boardWidth / width;
     for (let row = 0; row < width; row++) {
         for (let col = 0; col < width; col++) {
