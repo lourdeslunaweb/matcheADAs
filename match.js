@@ -6,26 +6,26 @@ const items = document.getElementsByClassName("item");
 // ************************
 // ***Horizontal Matches***
 // ************************
-// const hMatch = (width) => {
-//     for (let i = 0; i < width; i++) {
-//         let rowItems = document.querySelectorAll(`[data-row="${i}"]`)
-//         for (let j = 0; j < rowItems.length - 2; j++) {
-//             let matchOne = rowItems[j].textContent;
-//             let matchTwo = rowItems[j + 1].textContent;
-//             let matchThree = rowItems[j + 2].textContent;
-//             if (matchOne === matchTwo && matchOne === matchThree) {
-//                 scoreAdd();
-//                 for (let k = j; k < rowItems.length; k++) {
-//                     if (matchOne === rowItems[k].textContent) {
-//                         rowItems[k].textContent = "";
-//                     } else {
-//                         break
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+const hMatch = (width) => {
+    for (let i = 0; i < width; i++) {
+        let rowItems = document.querySelectorAll(`[data-row="${i}"]`)
+        for (let j = 0; j < rowItems.length - 2; j++) {
+            let matchOne = rowItems[j].textContent;
+            let matchTwo = rowItems[j + 1].textContent;
+            let matchThree = rowItems[j + 2].textContent;
+            if (matchOne === matchTwo && matchOne === matchThree) {
+                scoreAdd();
+                for (let k = j; k < rowItems.length; k++) {
+                    if (matchOne === rowItems[k].textContent) {
+                        rowItems[k].textContent = "";
+                    } else {
+                        break
+                    }
+                }
+            }
+        }
+    }
+}
 
 // ********************
 // **Vertical Matches**
@@ -51,10 +51,10 @@ const vMatch = width => {
     }
 }
 
-// // *****************************************
-// // ***Fill Empty Items and Download Items***
-// // *****************************************
-const fill = width => {
+// // *******************
+// // ***Descend Items***
+// // *******************
+const descendItems = width => {
     for (let i = width; i >= 0; i--) {
         let colItems = document.querySelectorAll(`[data-col="${i}"]`)
         for (let j = colItems.length - 1; j >= 0; j--) {
@@ -65,10 +65,22 @@ const fill = width => {
                         colItems[k].textContent = "";
                         break;
                     }
-                    colItems[k].textContent = "x";
-                    // animals[Math.floor(Math.random() * animals.length)];
                 }
             }
         }
     }
-} 
+}
+
+// // **********************
+// // ***Fill Empty Items***
+// // **********************
+const fill = width => {
+    for (let i = 0; i < width; i++) {
+        let rowItems = document.querySelectorAll(`[data-row="${i}"]`)
+        for (let j = 0; j < rowItems.length; j++) {
+            if (rowItems[j].textContent === "") {
+                rowItems[j].textContent = animals[Math.floor(Math.random() * animals.length)];
+            }
+        }
+    }
+}
