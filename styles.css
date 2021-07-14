@@ -63,8 +63,6 @@ h1 {
 }
 
 .board {
-    height: 504px;
-    width: 504px;
     border-radius: 20px;
     background-color: rgba(124,37,72);
     display: flex;
@@ -124,4 +122,36 @@ h1 {
 
 #combo{
     margin-left: 10px;
+}
+
+.responsive{
+    height: 504px;
+    width: 504px;
+}
+
+@media screen and (max-width: 510px){
+    .responsive{
+        height: 350px;
+        width: 350px;
+    }
+    .control{
+        width: 350px;
+    }
+    .timer {
+        width: 200px;
+        height: 30px;
+        border-radius: 15px;
+        margin-bottom: 1.5rem;
+        font-size: 15px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .control{
+        width: 350px;
+        height: 30px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 15px;
+    }
 }

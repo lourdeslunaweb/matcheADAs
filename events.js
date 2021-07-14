@@ -79,8 +79,6 @@ const select = e => {
             vMatch(width);
             descendItems(width);
             fill(width);
-            // hMatch(width);
-            // vMatch(width);
         }
         else {
             targetsArray[0].classList.remove("selected");

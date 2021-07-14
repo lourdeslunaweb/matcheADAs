@@ -58,7 +58,6 @@ const gameCountdown = () => {
             gameSeconds--;
             if (gameSeconds == -1) {
                 clearInterval(chronometer);
-                // clearInterval(comboSearch);
             }
         }, 1000);
     }

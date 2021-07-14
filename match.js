@@ -16,14 +16,10 @@ const hMatch = (width) => {
             if (matchOne === matchTwo && matchOne === matchThree) {
                 for (let k = j; k < rowItems.length; k++) {
                     if (matchOne === rowItems[k].textContent) {
-                    // return 
-                    rowItems[k].textContent = "";
-                    } else {
-                        // break
-                        // return false;
-                    }
+                        rowItems[k].textContent = "";
+                    } 
                 }
-            } 
+            }
         }
     }
 }

@@ -3,6 +3,7 @@
 // ************************************
 const board = document.getElementById("board");
 const animals = ['🐶', '🐱', '🐰', '🦊', '🐷', '🐸'];
+let boardWidth;
 let width;
 let item;
 
@@ -10,7 +11,15 @@ let item;
 // ***Create Board***
 // ******************
 const createBoard = width => {
-    let itemWidth = 504 / width;
+    if (screen.width < 510){
+        board.style.width = "350px";
+        boardWidth = 350;
+    } else {
+        board.style.width = "504px";
+        boardWidth = 504;
+    }
+
+    let itemWidth = boardWidth / width;
     for (let row = 0; row < width; row++) {
         for (let col = 0; col < width; col++) {
             item = document.createElement("div");
