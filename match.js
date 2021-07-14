@@ -14,7 +14,6 @@ const hMatch = (width) => {
             let matchTwo = rowItems[j + 1].textContent;
             let matchThree = rowItems[j + 2].textContent;
             if (matchOne === matchTwo && matchOne === matchThree) {
-                scoreAdd();
                 for (let k = j; k < rowItems.length; k++) {
                     if (matchOne === rowItems[k].textContent) {
                     // return 
@@ -40,7 +39,6 @@ const vMatch = width => {
             let matchTwo = colItems[j + 1].textContent;
             let matchThree = colItems[j + 2].textContent;
             if (matchOne === matchTwo && matchOne === matchThree) {
-                scoreAdd();
                 for (let k = j; k < colItems.length; k++) {
                     if (matchOne === colItems[k].textContent) {
                         colItems[k].textContent = "";
@@ -81,8 +79,7 @@ const fill = width => {
         let rowItems = document.querySelectorAll(`[data-row="${i}"]`)
         for (let j = 0; j < rowItems.length; j++) {
             if (rowItems[j].textContent === "") {
-                rowItems[j].textContent = "x";
-                // animals[Math.floor(Math.random() * animals.length)];
+                rowItems[j].textContent = animals[Math.floor(Math.random() * animals.length)];
             }
         }
     }

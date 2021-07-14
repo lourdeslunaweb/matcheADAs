@@ -51,6 +51,10 @@ const gameCountdown = () => {
             let seconds = (gameSeconds % 60);
             seconds = seconds < 10 ? "0" + seconds : seconds
             gameTimeSpan.innerHTML = `${minutes} : ${seconds}`
+            hMatch(width);
+            vMatch(width);
+            descendItems(width);
+            fill(width);
             gameSeconds--;
             if (gameSeconds == -1) {
                 clearInterval(chronometer);

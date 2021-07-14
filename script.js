@@ -33,6 +33,10 @@ const createBoard = width => {
             item.dataset.row = row;
             item.addEventListener("click", select);
         }
+        hMatch(width);
+        vMatch(width);
+        descendItems(width);
+        fill(width);
     }
 }
 createBoard()
