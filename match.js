@@ -17,12 +17,14 @@ const hMatch = (width) => {
                 scoreAdd();
                 for (let k = j; k < rowItems.length; k++) {
                     if (matchOne === rowItems[k].textContent) {
-                        rowItems[k].textContent = "";
+                    // return 
+                    rowItems[k].textContent = "";
                     } else {
-                        break
+                        // break
+                        // return false;
                     }
                 }
-            }
+            } 
         }
     }
 }
