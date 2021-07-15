@@ -11,7 +11,10 @@ let item;
 // ***Create Board***
 // ******************
 const createBoard = width => {
-    if (screen.width < 510){
+    if (screen.width < 350){
+        board.style.width = "280px";
+        boardWidth = 280;
+    } else if (screen.width < 510) {
         board.style.width = "350px";
         boardWidth = 350;
     } else {

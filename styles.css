@@ -155,3 +155,30 @@ h1 {
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: 350px){
+    .responsive{
+        height: 280px;
+        width: 280px;
+    }
+    .control{
+        width: 280px;
+    }
+    .timer {
+        width: 280px;
+        height: 25px;
+        border-radius: 15px;
+        margin-bottom: 1.5rem;
+        font-size: 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .control{
+        width: 280px;
+        height: 20px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 10px;
+    }
+}
