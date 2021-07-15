@@ -21,6 +21,8 @@ Normal: grilla de 8x8
 Difícil: grilla de 7x7
 - Se puede reiniciar el juego con opción de elegir nuevamente la dificultad
 
+### Deployado [aquí](https://lourdeslunaweb.github.io/matcheadas-backup/)
+
 ### 🚀 Tecnologías utilizadas:
 - HTML5
 - CSS3

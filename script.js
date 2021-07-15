@@ -45,6 +45,7 @@ const createBoard = width => {
         vMatch(width);
         descendItems(width);
         fill(width);
+        clearScore();
     }
 }
 createBoard()

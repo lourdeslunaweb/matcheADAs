@@ -14,14 +14,10 @@ const scoreAdd = () => {
     scoreSpan.innerHTML = `${score}`;
 }
 
-// ***************************
-// ***Combo Detect Function***
-// ***************************
-// const comboDetect = () => {
-//     comboSearch = setInterval(() => {
-//         hMatch();
-//         vMatch();
-//         comboSpan.innerHTML = "x3";
-//         // score = score + 300;
-//     }, 1000);
-// }
+// **************************
+// ***Clear Score Function***
+// **************************
+const clearScore = () => {
+    scoreSpan.innerHTML = 0;
+    score = 0;
+}

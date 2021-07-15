@@ -54,8 +54,8 @@ const clearTimer = () =>{
     chronometer = false;
     clearTimeout(chronometerBehind);
     chronometerBehind = false;
-    gameTimeSpan.innerHTML = "2 : 00";
-    gameSeconds = 120;
+    gameTimeSpan.innerHTML = "1 : 00";
+    gameSeconds = 60;
 }
 const gamePause = () =>{
     clearInterval(chronometer);
@@ -98,6 +98,7 @@ const resetGame = () => {
                     board.classList.add("display-none");
                     clearBoard();
                     clearTimer();
+                    clearScore();
                     gameLevel();
                     break;
             }

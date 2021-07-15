@@ -17,6 +17,7 @@ const hMatch = (width) => {
                 for (let k = j; k < rowItems.length; k++) {
                     if (matchOne === rowItems[k].textContent) {
                         rowItems[k].textContent = "";
+                        scoreAdd();
                     } 
                 }
             }
@@ -38,6 +39,7 @@ const vMatch = width => {
                 for (let k = j; k < colItems.length; k++) {
                     if (matchOne === colItems[k].textContent) {
                         colItems[k].textContent = "";
+                        scoreAdd();
                     } else {
                         break
                     }

@@ -1,7 +1,7 @@
 // ********************************
 // ***Variable Settings of Timer***
 // ********************************
-let gameSeconds = 120;
+let gameSeconds = 60;
 let chronometer;
 let chronometerBehind;
 const gameTimeSpan = document.getElementById("gameTime");
@@ -10,20 +10,23 @@ const gameTimeSpan = document.getElementById("gameTime");
 // ***End Game Alert***
 // ********************
 const endGame = () => {
-    swal("Fin de la partida", "Gracias por participar.", {
-        buttons: {
-            end: {
-                text: "Finalizar la partida",
-                value: "end",
-                className: "btn-swal",
+    swal({
+        title: "Fin de la partida",
+        text: `¡Gracias por participar! Puntaje Final: ${score}`,
+        closeOnClickOutside: false, 
+            buttons: {
+                end: {
+                    text: "Finalizar la partida",
+                    value: "end",
+                    className: "btn-swal",
+                },
+                again: {
+                    text: "Jugar de nuevo",
+                    value: "again",
+                    className: "btn-swal",
+                },
             },
-            again: {
-                text: "Jugar de nuevo",
-                value: "again",
-                className: "btn-swal",
-            },
-        },
-    })
+        })
         .then((value) => {
             switch (value) {
                 case "again":
@@ -32,6 +35,7 @@ const endGame = () => {
                     board.classList.add("display-none");
                     clearBoard();
                     clearTimer();
+                    clearScore();
                     gameLevel();
                     break;
                 case "end":
@@ -66,7 +70,7 @@ const gameCountdown = () => {
 // ********************
 // ***End Countdown***
 // ********************
-const endCountdown = () =>(
+const endCountdown = () => (
     chronometerBehind = setTimeout(endGame, ((gameSeconds * 1000) + 1000))
 )
 
