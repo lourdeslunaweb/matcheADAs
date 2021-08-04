@@ -1,7 +1,7 @@
 // ********************************
 // ***Variable Settings of Timer***
 // ********************************
-let gameSeconds = 180;
+let gameSeconds = 60;
 let chronometer;
 let chronometerBehind;
 const gameTimeSpan = document.getElementById("gameTime");
