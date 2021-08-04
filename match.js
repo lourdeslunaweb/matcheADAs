@@ -10,13 +10,13 @@ const hMatch = (width) => {
     for (let i = 0; i < width; i++) {
         let rowItems = document.querySelectorAll(`[data-row="${i}"]`)
         for (let j = 0; j < rowItems.length - 2; j++) {
-            let matchOne = rowItems[j].textContent;
-            let matchTwo = rowItems[j + 1].textContent;
-            let matchThree = rowItems[j + 2].textContent;
+            let matchOne = rowItems[j].innerText;
+            let matchTwo = rowItems[j + 1].innerText;
+            let matchThree = rowItems[j + 2].innerText;
             if (matchOne === matchTwo && matchOne === matchThree) {
                 for (let k = j; k < rowItems.length; k++) {
-                    if (matchOne === rowItems[k].textContent) {
-                        rowItems[k].textContent = "";
+                    if (matchOne === rowItems[k].innerText) {
+                        rowItems[k].innerText = null;
                         scoreAdd();
                     } 
                 }
@@ -32,13 +32,13 @@ const vMatch = width => {
     for (let i = 0; i < width; i++) {
         let colItems = document.querySelectorAll(`[data-col="${i}"]`)
         for (let j = 0; j < colItems.length - 2; j++) {
-            let matchOne = colItems[j].textContent;
-            let matchTwo = colItems[j + 1].textContent;
-            let matchThree = colItems[j + 2].textContent;
+            let matchOne = colItems[j].innerText;
+            let matchTwo = colItems[j + 1].innerText;
+            let matchThree = colItems[j + 2].innerText;
             if (matchOne === matchTwo && matchOne === matchThree) {
                 for (let k = j; k < colItems.length; k++) {
-                    if (matchOne === colItems[k].textContent) {
-                        colItems[k].textContent = "";
+                    if (matchOne === colItems[k].innerText) {
+                        colItems[k].innerText = null;
                         scoreAdd();
                     } else {
                         break
@@ -56,11 +56,11 @@ const descendItems = width => {
     for (let i = width; i >= 0; i--) {
         let colItems = document.querySelectorAll(`[data-col="${i}"]`)
         for (let j = colItems.length - 1; j >= 0; j--) {
-            if (colItems[j].textContent === "") {
+            if (colItems[j].innerText === "") {
                 for (let k = j; k >= 0; k--) {
-                    if (colItems[k].textContent !== "") {
-                        colItems[j].textContent = colItems[k].textContent;
-                        colItems[k].textContent = "";
+                    if (colItems[k].innerText !== "") {
+                        colItems[j].innerText = colItems[k].innerText;
+                        colItems[k].innerText = "";
                         break;
                     }
                 }
@@ -76,8 +76,8 @@ const fill = width => {
     for (let i = 0; i < width; i++) {
         let rowItems = document.querySelectorAll(`[data-row="${i}"]`)
         for (let j = 0; j < rowItems.length; j++) {
-            if (rowItems[j].textContent === "") {
-                rowItems[j].textContent = animals[Math.floor(Math.random() * animals.length)];
+            if (rowItems[j].innerText === "") {
+                rowItems[j].innerText = animals[Math.floor(Math.random() * animals.length)];
             }
         }
     }

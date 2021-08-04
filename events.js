@@ -8,30 +8,30 @@ let targetsArray = []; // lista de target capturados al hacer click (div item)
 // ***Items Swap***
 // ****************
 const swap = () => {
-    targetsArray[0].innerHTML = itemClicked[1];
-    targetsArray[1].innerHTML = itemClicked[0];
+    // targetsArray[0].innerHTML = itemClicked[1];
+    // targetsArray[1].innerHTML = itemClicked[0];
 
-    // const auxTop = targetsArray[1].style.top;
-    // const auxLeft = targetsArray[1].style.left;
+    const auxTop = targetsArray[1].style.top;
+    const auxLeft = targetsArray[1].style.left;
 
-    // targetsArray[1].style.top = targetsArray[0].style.top;
-    // targetsArray[1].style.left = targetsArray[0].style.left;
+    targetsArray[1].style.top = targetsArray[0].style.top;
+    targetsArray[1].style.left = targetsArray[0].style.left;
 
-    // targetsArray[0].style.top = auxTop;
-    // targetsArray[0].style.left = auxLeft;
+    targetsArray[0].style.top = auxTop;
+    targetsArray[0].style.left = auxLeft;
 
-    // targetsArray[0].classList.remove("selected");
-    // targetsArray[1].classList.remove("selected");
+    targetsArray[0].classList.remove("selected");
+    targetsArray[1].classList.remove("selected");
 
     // *** Actualizar el board ***
-    // let aux0Row = targetsArray[0].dataset.row;
-    // let aux0Col = targetsArray[0].dataset.col;
-    // let aux1Row = targetsArray[1].dataset.row;
-    // let aux1Col = targetsArray[1].dataset.col;
-    // targetsArray[0].setAttribute('data-row', aux1Row)
-    // targetsArray[1].setAttribute('data-row', aux0Row)
-    // targetsArray[0].setAttribute('data-col', aux1Col)
-    // targetsArray[1].setAttribute('data-col', aux0Col)
+    let aux0Row = targetsArray[0].getAttribute('data-row');
+    let aux0Col = targetsArray[0].getAttribute('data-col');
+    let aux1Row = targetsArray[1].getAttribute('data-row');
+    let aux1Col = targetsArray[1].getAttribute('data-col');
+    targetsArray[0].setAttribute('data-row', aux1Row)
+    targetsArray[1].setAttribute('data-row', aux0Row)
+    targetsArray[0].setAttribute('data-col', aux1Col)
+    targetsArray[1].setAttribute('data-col', aux0Col)
 
     // for (let row = 0; row < width; row++) {
     //     for (let col = 0; col < width; col++) {
